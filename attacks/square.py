@@ -539,7 +539,10 @@ class WatermarkDetectorWrapper(PyTorchClassifier):
                 self.message
             )
             return np.array([bitacc.item()])
-        return np.array([result])
+
+        if torch.is_tensor(result):
+            result = result.detach().cpu().mean().item()
+        return np.array([result]).flatten()
 
     def bwacc_audioseal(self, signal: torch.Tensor) -> np.ndarray:
         """Returns direct signal evaluation array scores from AudioSeal."""
@@ -551,7 +554,10 @@ class WatermarkDetectorWrapper(PyTorchClassifier):
                 self.message
             )
             return np.array([bitacc.item()])
-        return np.array([result])
+
+        if torch.is_tensor(result):
+            result = result.detach().cpu().mean().item()
+        return np.array([result]).flatten()
 
     def get_detection_result_wavmark(self, spectrogram: np.ndarray) -> np.ndarray:
         """Processes and decodes adversarial configurations using WavMark components."""
@@ -782,12 +788,15 @@ def main() -> None:
 
     if args.model == "audioseal":
         from audioseal import AudioSeal
+
         model = AudioSeal.load_detector("audioseal_detector_16bits").to(device=device)
     elif args.model == "wavmark":
         import wavmark
+
         model = wavmark.load_model().to(device)
     elif args.model == "timbre":
         from timbre.model.conv2_mel_modules import Decoder
+
         process_config = yaml.load(
             open("timbre/config/process.yaml", "r"), Loader=yaml.FullLoader
         )
