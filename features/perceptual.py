@@ -36,22 +36,6 @@ def get_loudness(y: np.ndarray) -> float:
     return float(np.mean(librosa.feature.rms(y=y)))
 
 
-def get_sharpness(y: np.ndarray, sr: int) -> float:
-    """Calculates audio sharpness (approximated).
-
-    Sharpness explicitly measures the sensation of "harshness" caused by
-    excessive high-frequency energy. Approximated here via Spectral Centroid.
-
-    Args:
-        y (np.ndarray): Audio time series.
-        sr (int): Sampling rate of `y`.
-
-    Returns:
-        float: The approximated sharpness score.
-    """
-    return get_spectral_centroid(y, sr)
-
-
 def get_roughness(y: np.ndarray, sr: int) -> float:
     """Calculates audio roughness (approximated).
 
