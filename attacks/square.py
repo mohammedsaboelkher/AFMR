@@ -40,9 +40,6 @@ import torchaudio.transforms as T
 from tqdm import tqdm
 import yaml
 
-from audioseal import AudioSeal
-import wavmark
-from timbre.model.conv2_mel_modules import Decoder
 from art.estimators.classification import PyTorchClassifier
 
 
@@ -784,10 +781,13 @@ def main() -> None:
         device = torch.device("cpu")
 
     if args.model == "audioseal":
+        from audioseal import AudioSeal
         model = AudioSeal.load_detector("audioseal_detector_16bits").to(device=device)
     elif args.model == "wavmark":
+        import wavmark
         model = wavmark.load_model().to(device)
     elif args.model == "timbre":
+        from timbre.model.conv2_mel_modules import Decoder
         process_config = yaml.load(
             open("timbre/config/process.yaml", "r"), Loader=yaml.FullLoader
         )
