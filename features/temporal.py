@@ -24,7 +24,7 @@ def get_speech_rate(y: np.ndarray, sr: int) -> float:
 
 def get_pause_statistics(
     y: np.ndarray, sr: int, top_db: float = 40.0
-) -> Tuple[float, float]:
+) -> tuple[float, float]:
     """Calculates the mean and variance of pause durations.
 
     Measures the average length and variance of silences between words
@@ -37,7 +37,7 @@ def get_pause_statistics(
             as silence. Defaults to 40.0.
 
     Returns:
-        Tuple[float, float]: The (mean, variance) of pause durations in seconds.
+        tuple[float, float]: The (mean, variance) of pause durations in seconds.
     """
     intervals = librosa.effects.split(y, top_db=top_db)
     if len(intervals) <= 1:

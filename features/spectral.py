@@ -124,4 +124,4 @@ def get_spectral_contrast(y: np.ndarray, sr: int) -> np.ndarray:
         np.ndarray: Mean spectral contrast value for each sub-band.
     """
     contrast = librosa.feature.spectral_contrast(y=y, sr=sr)
-    return np.mean(contrast, axis=1)
+    return float(np.mean(contrast))

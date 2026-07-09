@@ -45,7 +45,7 @@ def get_peak_amplitude(y: np.ndarray) -> float:
     Returns:
         float: The maximum absolute amplitude value.
     """
-    return np.max(np.abs(y))
+    return float(np.max(np.abs(y)))
 
 
 def get_rms_energy(y: np.ndarray) -> float:
