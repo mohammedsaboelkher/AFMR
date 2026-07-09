@@ -1,0 +1,26 @@
+id,category,duration,dominant_phoentic_class,text
+1,Short,Short,Balanced,Hello.
+2,Short,Short,Balanced,Thank you very much.
+3,Short,Short,Balanced,"Good morning, everyone."
+4,General,Medium,Balanced,Artificial intelligence is transforming modern communication.
+5,General,Medium,Balanced,The meeting will begin at exactly nine o'clock tomorrow morning.
+6,General,Medium,Balanced,Please remember to save your work before closing the application.
+7,General,Medium,Balanced,The weather is expected to remain sunny throughout the afternoon.
+8,Vowel-rich,Medium,Vowels,The eager eagle easily reached the green tree.
+9,Vowel-rich,Medium,Vowels,Olivia and Amelia agreed to eat peaches beneath the willow.
+10,Vowel-rich,Medium,Vowels,Every evening the sea breeze carried an easy melody.
+11,Fricative-rich,Medium,Fricatives,She sells fresh seashells beside the seashore.
+12,Fricative-rich,Medium,Fricatives,Sophisticated software safely secures sensitive systems.
+13,Fricative-rich,Medium,Fricatives,Fifty fishermen fixed several fishing vessels before sunrise.
+14,Plosive-rich,Medium,Plosives,Peter packed two black backpacks before breakfast.
+15,Plosive-rich,Medium,Plosives,The captain kept checking the backup battery pack.
+16,Plosive-rich,Medium,Plosives,Big brown bears bumped into broken branches beside the bridge.
+17,Numbers,Medium,Mixed,The temperature reached twenty-four point six degrees Celsius.
+18,Numbers,Medium,Mixed,My flight departs at six thirty-five on September twenty-first.
+19,Numbers,Medium,Mixed,The package weighs three point seven kilograms and costs forty-nine dollars.
+20,Proper nouns,Medium,Mixed,Singapore has become a global center for artificial intelligence research.
+21,Proper nouns,Medium,Mixed,OpenAI collaborated with researchers from Cambridge and Tokyo.
+22,Long,Long,Balanced,"Although the experiment produced encouraging preliminary results, additional evaluation under realistic environmental conditions is necessary before drawing definitive conclusions."
+23,Long,Long,Balanced,Researchers often compare multiple algorithms using standardized benchmarks because reproducibility is essential for meaningful scientific progress.
+24,Emotional,Medium,Expressive,I cannot believe we finally made it after all these years!
+25,Emotional,Medium,Expressive,"Please, don't leave just yet. I still have something important to tell you."

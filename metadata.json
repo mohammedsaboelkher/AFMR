@@ -1,0 +1,118 @@
+{
+  "category": {
+    "description": "Designed linguistic category used to diversify utterances.",
+    "purpose": "Controls phonetic and acoustic diversity across the benchmark.",
+    "values": {
+      "General": {
+        "description": "Balanced everyday speech representative of normal TTS usage.",
+        "expected_characteristics": [
+          "Balanced phoneme distribution",
+          "Neutral prosody",
+          "Baseline comparison"
+        ]
+      },
+      "Short": {
+        "description": "Very short utterances.",
+        "expected_characteristics": [
+          "Limited embedding opportunities",
+          "Short temporal context",
+          "Useful for synchronization studies"
+        ]
+      },
+      "Long": {
+        "description": "Long, multi-clause sentences.",
+        "expected_characteristics": [
+          "Long temporal context",
+          "Suitable for cropping and synchronization attacks",
+          "Greater prosodic variation"
+        ]
+      },
+      "Vowel-rich": {
+        "description": "Sentences intentionally containing many vowels and sonorant sounds.",
+        "expected_characteristics": [
+          "Strong harmonic structure",
+          "Stable formants",
+          "High voiced ratio",
+          "Lower spectral flatness"
+        ]
+      },
+      "Fricative-rich": {
+        "description": "Sentences emphasizing fricative consonants such as /s/, /f/, /ʃ/, and /z/.",
+        "expected_characteristics": [
+          "Broadband high-frequency energy",
+          "Higher spectral entropy",
+          "More noise-like regions"
+        ]
+      },
+      "Plosive-rich": {
+        "description": "Sentences emphasizing plosive consonants such as /p/, /t/, /k/, /b/, /d/, and /g/.",
+        "expected_characteristics": [
+          "Transient bursts",
+          "Rapid spectral changes",
+          "Strong temporal discontinuities"
+        ]
+      },
+      "Numbers": {
+        "description": "Sentences containing dates, measurements, currencies, or numerical values.",
+        "expected_characteristics": [
+          "Exercises text normalization",
+          "Tests pronunciation of numeric expressions"
+        ]
+      },
+      "Proper nouns": {
+        "description": "Sentences containing names of people, places, organizations, or products.",
+        "expected_characteristics": [
+          "Tests pronunciation of uncommon lexical items",
+          "May induce pronunciation variability across models"
+        ]
+      },
+      "Emotional": {
+        "description": "Sentences intended to elicit expressive speech.",
+        "expected_characteristics": [
+          "Larger pitch variation",
+          "Higher energy dynamics",
+          "Expressive prosody"
+        ]
+      }
+    }
+  },
+  "duration": {
+    "description": "Approximate expected duration of the synthesized utterance.",
+    "purpose": "Used for grouping utterances by temporal length.",
+    "values": {
+      "Short": {
+        "description": "Typically under 2 seconds."
+      },
+      "Medium": {
+        "description": "Typically between 2 and 6 seconds."
+      },
+      "Long": {
+        "description": "Typically over 6 seconds."
+      }
+    }
+  },
+  "dominant_phonetic_class": {
+    "description": "Primary phonetic characteristic intentionally emphasized by the prompt.",
+    "purpose": "Provides a coarse phonetic grouping for later analysis.",
+    "values": {
+      "Balanced": {
+        "description": "No intentionally dominant phonetic class."
+      },
+      "Vowels": {
+        "description": "Predominantly vowel and sonorant phonemes producing smoother harmonic speech."
+      },
+      "Fricatives": {
+        "description": "Predominantly fricative consonants producing broadband spectral energy."
+      },
+      "Plosives": {
+        "description": "Predominantly stop consonants producing transient bursts."
+      },
+      "Expressive": {
+        "description": "Prosody-driven rather than phoneme-driven speech."
+      },
+      "Mixed": {
+        "description": "Combination of multiple phonetic classes without one being intentionally dominant."
+      }
+    }
+  }
+}
