@@ -46,7 +46,6 @@ from temporal import (
 from perceptual import (
     get_lufs,
     get_loudness,
-    get_sharpness,
     get_roughness,
 )
 
@@ -119,7 +118,6 @@ def extract_pre_watermark_features(audio_path: str) -> dict[str, Any]:
 
     features["lufs"] = get_lufs(y, sr)
     features["loudness"] = get_loudness(y)
-    features["sharpness"] = get_sharpness(y, sr)
     features["roughness"] = get_roughness(y, sr)
 
     return features
